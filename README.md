@@ -14,6 +14,6 @@
 нужно повторить. Для этого программе создали функцию draw(.), которую могли вызвать клавишей „p‟
 
 
-![alt text](img/example.PNG "How it works")​
+![alt text](img/example.png "How it works")​
 
 
