@@ -1,18 +1,13 @@
-Все графические функции использовали специальную структуру, контекст окна. Она хранит текущие параметры области, в которой мы рисуем.
-Контекст храниться в переменной типа HDC(Handle to Device Context)
+All graphical functions used a special structure, window context. It stores current parameters of the area in which we draw.
+The context is stored in a variable of HDC (Handle to Device Context) type
 
-Графика в консоли видна тогда, когда рисование выпоняется в видимое окно. 
-После сворачивания или перекрытия окна консоли графика исчезает. 
-На самом деле приложения Windows получают сообщение от ОС о том, что они должны перерисовать свое окно (или его часть) и 
-программисты помещают вызов графических функций в обработчик этого сообщения (специальную функцию). 
+Graphics in the console is visible when drawing is performed in a visible window. 
+When the console window is minimized or overlapped, the graphics disappear. 
+In fact, Windows applications receive a message from the OS that they should redraw their window (or part of it) and the 
+programmers place calls to graphics functions in the handler of this message (a special function). 
 
-В программе, написанной для консоли, мы не можем перехватить и обработать такое сообщение. Но перерисовка консоли 
-после восстановления видимости ее окна все равно происходит. Это приводит к 
-рисованию «пустоты», т.е. к очистке окна. Поэтому приходится «выкручиваться». 
-
-После сворачивания или перекрытия окна консоли рисование 
-нужно повторить. Для этого программе создали функцию draw(.), которую могли вызвать клавишей „p‟
-
+After minimizing or overlapping the console window, the drawing must be repeated. 
+must be repeated. For this purpose, the program created the draw(.) function, which can be called with the "p" key
 
 ![alt text](img/example.png "How it works")​
 
